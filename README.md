@@ -16,18 +16,3 @@ The modifications made to the NAntTask to allow it to run Ant jobs properly is i
 3.  The default logger and listener are not correct for Ant, the defaults are .Net classes but Ant wants Java classes instead.  I removed the default values but I have not tried any values at all so this area may not work as expected.
 
 4.  There is an issue with the Parameter Formatter that CCNet uses when it formats the CCNet variables for Ant, I had to wrap the values in '' (quotes) in order to get them passed correctly.  For some reason the CCNet formatter outputs empty values and I think this causes Ant some issues.  This should be looked at further if you really need the CCNet variables.
-
-
-Usage:
-In your ccnet.config file you can use this just like you would use the NAnt task
-
-&lt;ant&gt;
-&lt;executable&gt;D:\apache-ant\bin\ant.bat&lt;/executable&gt;
-&lt;baseDirectory&gt;D:\MyProject&lt;/baseDirectory&gt;
-&lt;buildArgs&gt;-DprojectVersion=1.0.0&lt;/buildArgs&gt;
-&lt;description&gt;Building MyProject Java code&lt;/description&gt;
-&lt;buildFile&gt;build.xml&lt;/buildFile&gt;
-&lt;targetList&gt;
-&lt;target&gt;release&lt;/target&gt;
-&lt;/targetList&gt;
-&lt;/ant&gt;
