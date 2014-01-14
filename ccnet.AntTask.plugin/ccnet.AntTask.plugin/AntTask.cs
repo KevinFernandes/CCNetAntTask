@@ -157,11 +157,6 @@ namespace ccnet.AntTask.plugin
         /// 	
         /// </summary>
         /// <remarks></remarks>
-        public const bool DefaultNoLogo = false;
-        /// <summary>
-        /// 	
-        /// </summary>
-        /// <remarks></remarks>
         public const ProcessPriorityClass DefaultPriority = ProcessPriorityClass.Normal;
 
         private readonly IFileDirectoryDeleter fileDirectoryDeleter = new IoService();
@@ -189,7 +184,6 @@ namespace ccnet.AntTask.plugin
 			this.BuildArgs = string.Empty;
 			this.Logger = DefaultLogger;
 			this.Listener = DefaultListener;
-			this.NoLogo = DefaultNoLogo;
 			this.BuildTimeoutSeconds = DefaultBuildTimeout;
 		}
 
@@ -277,15 +271,15 @@ namespace ccnet.AntTask.plugin
         public string Listener { get; set; }
         #endregion
 
-        #region NoLogo
-        /// <summary>
-        /// Whether to use the -nologo argument when calling Ant.
-        /// </summary>
-        /// <version>1.0</version>
-        /// <default>true</default>
-        [ReflectorProperty("nologo", Required = false)]
-        public bool NoLogo { get; set; }
-        #endregion
+		//#region NoLogo
+		///// <summary>
+		///// Whether to use the -nologo argument when calling Ant.
+		///// </summary>
+		///// <version>1.0</version>
+		///// <default>true</default>
+		//[ReflectorProperty("nologo", Required = false)]
+		//public bool NoLogo { get; set; }
+		//#endregion
 
         #region BuildTimeoutSeconds
         /// <summary>
@@ -360,7 +354,6 @@ namespace ccnet.AntTask.plugin
         protected override string GetProcessArguments(IIntegrationResult result)
         {
             ProcessArgumentBuilder buffer = new ProcessArgumentBuilder();
-            buffer.AppendIf(NoLogo, "-nologo");
             buffer.AppendArgument(@"-buildfile {0}", StringUtil.AutoDoubleQuoteString(BuildFile));
 			if( !string.IsNullOrEmpty(Logger) )
 				buffer.AppendArgument("-logger {0}", Logger);
