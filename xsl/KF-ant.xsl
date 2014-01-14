@@ -108,12 +108,12 @@
     <table border="0" cellpadding="0" cellspacing="0" width="100%">
     <tr>
       <td valign="top" class="bannercell">
-        <a href="http://jakarta.apache.org/">
-        <img src="http://jakarta.apache.org/images/jakarta-logo.gif" alt="http://jakarta.apache.org" align="left" border="0"/>
+        <a href="http://ant.apache.org/">
+        <img src="http://ant.apache.org/images/project-logo.gif" alt="http://ant.apache.org/" align="left" border="0"/>
         </a>
       </td>
       <td style="text-align:right;vertical-align:bottom">
-        <a href="http://jakarta.apache.org/ant">Apache Ant</a>
+        <a href="http://ant.apache.org/">Apache Ant</a>
       </td>
     </tr>
     </table>
@@ -129,7 +129,7 @@
       <tr><td><hr noshade="yes" size="1"/></td></tr>
       <tr><td>
       <div align="center"><font color="#525D76" size="-1"><em>
-      Copyright &#169; 2000-2002, Apache Software Foundation
+      Copyright &#169; 2000-2014, Apache Software Foundation
       </em></font></div>
       </td></tr>
     </table>
