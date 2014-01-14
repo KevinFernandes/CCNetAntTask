@@ -29,3 +29,6 @@ In your ccnet.config file you can use this just like you would use the NAnt task
   </targetList>
 </ant>
 ```
+
+In the "XSL" folder is an updated Ant.xsl file which outputs Ant related build information only if there actually is Ant build information in the build log.  The existing CCNet Ant.xsl file would output Ant related information regardless if there Ant information or not in the build.  This was a little annoying as I have builds that do not use Ant but was seeing Ant reports in the emails and dashboard.
+Place this new file in the xsl directory for both the dashboard and the server.  Update the config files as appropriate.
